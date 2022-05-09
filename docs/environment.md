@@ -46,3 +46,9 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
 CREATE USER 'user'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
 GRANT ALL PRIVILEGES ON *.* TO 'user'@'%';
 ```
+
+## 安装 redis
+
+```shell
+docker run --name some-redis -d redis
+```
