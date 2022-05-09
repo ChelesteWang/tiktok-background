@@ -21,3 +21,28 @@ docker run \
 登录进去后点击创建 Busket 
 
 <img width="1725" alt="image" src="https://user-images.githubusercontent.com/40495740/167343233-202e18fb-6172-4230-868b-25d6613452fd.png">
+
+## 安装 MySQL
+
+docker 中下载 mysql
+```
+docker pull mysql
+```
+启动
+```
+docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+```
+进入容器
+```
+docker exec -it mysql bash
+```
+登录mysql
+```
+mysql -u root -p
+ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
+```
+添加远程登录用户
+```
+CREATE USER 'user'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'%';
+```
