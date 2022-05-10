@@ -1,6 +1,6 @@
-module github.com/ChelesteWang/tiktok-background
+module github.com/RaymondCode/simple-demo
 
-go 1.18
+go 1.17
 
 require github.com/gin-gonic/gin v1.7.7
 
@@ -22,4 +22,3 @@ require (
 	google.golang.org/protobuf v1.28.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
-
