@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/RaymondCode/simple-demo/controller"
+	"github.com/ChelesteWang/tiktok-background/api"
 	"github.com/gin-gonic/gin"
 )
 
@@ -12,21 +12,21 @@ func initRouter(r *gin.Engine) {
 	apiRouter := r.Group("/douyin")
 
 	// basic apis
-	apiRouter.GET("/feed/", controller.Feed)
-	apiRouter.GET("/user/", controller.UserInfo)
-	apiRouter.POST("/user/register/", controller.Register)
-	apiRouter.POST("/user/login/", controller.Login)
-	apiRouter.POST("/publish/action/", controller.Publish)
-	apiRouter.GET("/publish/list/", controller.PublishList)
+	apiRouter.GET("/feed/", api.Feed)
+	apiRouter.GET("/user/", api.UserInfo)
+	apiRouter.POST("/user/register/", api.Register)
+	apiRouter.POST("/user/login/", api.Login)
+	apiRouter.POST("/publish/action/", api.Publish)
+	apiRouter.GET("/publish/list/", api.PublishList)
 
 	// extra apis - I
-	apiRouter.POST("/favorite/action/", controller.FavoriteAction)
-	apiRouter.GET("/favorite/list/", controller.FavoriteList)
-	apiRouter.POST("/comment/action/", controller.CommentAction)
-	apiRouter.GET("/comment/list/", controller.CommentList)
+	apiRouter.POST("/favorite/action/", api.FavoriteAction)
+	apiRouter.GET("/favorite/list/", api.FavoriteList)
+	apiRouter.POST("/comment/action/", api.CommentAction)
+	apiRouter.GET("/comment/list/", api.CommentList)
 
 	// extra apis - II
-	apiRouter.POST("/relation/action/", controller.RelationAction)
-	apiRouter.GET("/relation/follow/list/", controller.FollowList)
-	apiRouter.GET("/relation/follower/list/", controller.FollowerList)
+	apiRouter.POST("/relation/action/", api.RelationAction)
+	apiRouter.GET("/relation/follow/list/", api.FollowList)
+	apiRouter.GET("/relation/follower/list/", api.FollowerList)
 }

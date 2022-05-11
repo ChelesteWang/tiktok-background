@@ -1,4 +1,4 @@
-package controller
+package api
 
 var DemoVideos = []Video{
 	{
@@ -36,6 +36,18 @@ var DemoComments = []Comment{
 		User:       DemoUser,
 		Content:    "Test Comment",
 		CreateDate: "05-01",
+	},
+	{
+		Id:         2,
+		User:       DemoUser,
+		Content:    "Test Comment1",
+		CreateDate: "05-09",
+	},
+	{
+		Id:         3,
+		User:       DemoUser,
+		Content:    "Test Comment2",
+		CreateDate: "05-08",
 	},
 }
 

@@ -1,10 +1,11 @@
-package controller
+package api
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"path/filepath"
+
+	"github.com/gin-gonic/gin"
 )
 
 type VideoListResponse struct {
